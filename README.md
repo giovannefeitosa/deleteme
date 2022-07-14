@@ -1,51 +1,25 @@
-# NestJS REST API Starter with Postgres, Passport Local and Social Auth
-
-[![codecov](https://codecov.io/gh/mattlehrer/nest-starter-pg-auth/branch/master/graph/badge.svg)](https://codecov.io/gh/mattlehrer/nest-starter-pg-auth)
+# NestJS API With Social Authentication
 
 ## How to use
 
 Run postgres locally with docker:
 
-`docker run --name postgres -e POSTGRES_PASSWORD=postgres -d postgres`
+`docker-compose up -d`
 
-(change the name of the container and the password if you want)
+> You can connect to the database using DBeaver 
+> on a Postgres database running at `localhost` port `5555`.
 
-Run [pgadmin](https://www.pgadmin.org/download/) to help with postgres admin and
-viewing data. Download or run with docker.
+Install dependencies:
 
-fork or clone this repo
+`yarn`
 
-`git clone --depth 1 https://github.com/mattlehrer/nest-starter-pg-auth.git nest-starter`
+Then run the server locally
 
-`cd nest-starter`
+`yarn start:dev`
 
-`npm i`
+## Database
 
-`npm run start:dev`
+The entities that you create or edit will automatically be created 
+or updated in the database. No need to additional setup.
 
-## What's working / Roadmap
-
-- [x] Postgres with TypeORM
-- [x] Husky and Lint-staged
-- [x] ESLint (instead of NestJS CLI generator's TSLint even though the
-      [official NestJS TS starter](https://github.com/nestjs/typescript-starter)
-      has switched to ESLint )
-- [x] Expose only intentional fields with
-      [class-validator](https://github.com/typestack/class-validator) and
-      ClassSerializerInterceptor on each route
-- [x] Testing with Jest
-- [x] User roles
-- [x] Logging with Pino setup with
-      [nestjs-pino](https://github.com/iamolegga/nestjs-pino) in its own global
-      module in case you want to use something else
-- [x] Passport Local (modified to allow email in username field)
-- [x] Passport JWT
-- [x] Passport Google
-- [x] Passport Facebook
-- [x] Passport Twitter
-- [x] Passport Github
-- [x] Transactional Email with Sendgrid
-- [x] Helmet
-- [x] CORS
-- [x] Events
-- [ ] Analytics
+It uses Typeorm.
