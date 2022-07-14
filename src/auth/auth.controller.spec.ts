@@ -15,7 +15,7 @@ jest.mock('./auth.service');
 jest.mock('@nestjs/config');
 
 const frontend = 'http://front.end';
-const success = '/login/success';
+const success = '/user/login/success';
 
 beforeEach(() => {
   jest.clearAllMocks();

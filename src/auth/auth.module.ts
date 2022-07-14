@@ -6,11 +6,11 @@ import { UserModule } from 'src/user/user.module';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
 import { FacebookStrategy } from './strategies/facebook.strategy';
-import { GithubStrategy } from './strategies/github.strategy';
+// import { GithubStrategy } from './strategies/github.strategy';
 import { GoogleStrategy } from './strategies/google.strategy';
 import { JwtStrategy } from './strategies/jwt.strategy';
 import { LocalStrategy } from './strategies/local.strategy';
-import { TwitterStrategy } from './strategies/twitter.strategy';
+// import { TwitterStrategy } from './strategies/twitter.strategy';
 
 @Module({
   imports: [
@@ -35,8 +35,8 @@ import { TwitterStrategy } from './strategies/twitter.strategy';
     JwtStrategy,
     GoogleStrategy,
     FacebookStrategy,
-    GithubStrategy,
-    TwitterStrategy,
+    //GithubStrategy,
+    //TwitterStrategy,
   ],
 })
 export class AuthModule {}

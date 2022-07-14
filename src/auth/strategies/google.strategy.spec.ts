@@ -21,7 +21,13 @@ const profile: Profile = {
   displayName: 'Blah Blah',
   profileUrl: 'http://blah.com/blah',
   _raw: 'blah',
-  _json: {},
+  _json: {
+    aud: 'blah',
+    exp: 123,
+    iat: 123,
+    iss: 'blah',
+    sub: 'blah',
+  },
 };
 
 describe('Google Strategy', () => {
